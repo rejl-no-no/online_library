@@ -1,6 +1,6 @@
 # Сайт для просмотра и выбора книг 
 
-Пройдя по ссылке [Online-library](https://rejl-no-no.github.io/online_library/static/index1.html) вы можете ознакомиться со страницей для просмотра и выбора книг.
+Пройдя по ссылке [Online-library](https://rejl-no-no.github.io/online_library/pages/index1.html) вы можете ознакомиться со страницей для просмотра и выбора книг.
 На странице представлены  некоторые книги с сайта [tululu.org](https://tululu.org/) в жанре "фантастика".
 
 
