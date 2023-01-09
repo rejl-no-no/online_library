@@ -17,7 +17,7 @@ def rebuild():
     env = Environment(loader=FileSystemLoader('.'), autoescape=select_autoescape(['html', 'xml']))
     template = env.get_template('template.html')
 
-    with open(args.content, 'r', encoding='utf8') as file:
+    with open(get_json(), 'r', encoding='utf8') as file:
         book_descriptions = json.load(file)
 
     os.makedirs(f'pages', exist_ok=True)
@@ -33,6 +33,14 @@ def rebuild():
             file.write(rendered_page)
 
 
+def get_json():
+    site = argparse.ArgumentParser(description='Создание сайта по данным из файла .json')
+    site.add_argument('--content', default = 'page_content_json.json', help='Файл с данными для создания сайта')
+    args = site.parse_args()
+
+    return(args.content)
+    
+
 def main():
 
     rebuild()
@@ -42,9 +50,5 @@ def main():
     server.serve(root='.')
 
 
-if __name__ == '__main__':
-    site = argparse.ArgumentParser(description='Создание сайта по данным из файла .json')
-    site.add_argument('--content', default = 'page_content_json.json', help='Файл с данными для создания сайта')
-    args = site.parse_args()
-    
+if __name__ == '__main__':    
     main()
