@@ -42,7 +42,6 @@ def get_json():
     
 
 def main():
-
     rebuild()
 
     server = Server()
