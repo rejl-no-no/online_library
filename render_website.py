@@ -38,7 +38,7 @@ def get_json():
     site.add_argument('--content', default = 'page_content_json.json', help='Файл с данными для создания сайта')
     args = site.parse_args()
 
-    return(args.content)
+    return args.content
     
 
 def main():
